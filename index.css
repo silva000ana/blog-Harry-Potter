@@ -1,0 +1,103 @@
+
+	* {
+	  box-sizing: border-box;
+	}
+
+	/*adicionando ao fundo */
+	body {
+	   
+		padding: 20px;
+	    background-color: #03091f;
+	}
+
+	/*cabeçalho do meu blog, onde normalmente tem a finalidade do site, como especie de conteiner*/
+	.header {
+	/*serve para definir a distancia do que eu escrevi ate a borda, diferente de margin*/
+	  padding: 30px;
+	  font-size: 40px;
+	  text-align: center;
+	  background: #03081a;
+	  color:#E57000;
+      font-family: 'Fira Sans Extra Condensed', sans-serif;
+	}
+
+
+	/*cria duas colunas de tamanho diferentes lado a lado*/
+	.leftcolumn {   
+	/*float serve para tirar um elemento de sua posição normal e colocalo ou na esquerda ou na direita*/
+	  float: left;
+	  width: 75%;
+	}
+
+	/*colocando outra coluna, dessa vezes menor*/
+	.rightcolumn {
+	  float: left;
+	  width: 25%;
+	  padding-left: 20px; 
+	}
+
+	/*uma falsa imagem, como coringa, quando quero adicionar algo eu sei que vou ali adicionar, no tamanho que designei, caso só quero deixar o espaço deixo assim*/
+	.fakeimg {
+	  background-color:#121317;
+	  width: 100%;
+	  padding: 20px;
+	}
+
+	/*serve para limpar o espaço entre as colunas*/
+	.row:after {
+	  content: "";
+	  display: table;
+	  clear: both;
+	}
+
+	/* cria uma caixa de conteudo como um container, só que ao contrário do container ele é flexivel */
+	.card {
+	   background-color: white;
+	   padding: 20px;
+	   margin-top: 20px;
+	   font-family: 'Bebas Neue', cursive;
+	   @import url ('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+	}
+
+	/* quando a tela tem menos de 800px ela empilha as colunas uma em cima da outra, isso serve para que isso nao aconteça*/
+	/* isso eu vi no site https://www.w3schools.com/*/
+	@media screen and (max-width: 800px) {
+	  .leftcolumn, .rightcolumn {   
+	    width: 100%;
+	    padding: 0;
+	  }
+	}
+
+	.giphy-embed{
+		display:flex;
+		justify-content: center;
+	}
+
+	.pesquisa{
+		display: flex;
+		justify-content: flex-end;
+	}
+	.titulo{
+		color:lightGrey;
+		display:flex;
+		justify-content: flex-end;
+	}
+	.textarea {
+    /* Para alinhar corretamente os campos de texto de várias linhas com sua label*/
+    vertical-align: top;
+
+    /* Para dar espaço suficiente para digitar algum texto */
+    height: 5em;
+
+    /* Para permitir aos usuários redimensionarem qualquer textarea verticalmente. Ele não funciona em todos os browsers */
+    resize: vertical;
+	}	
+
+	.footer{
+		background-color:grey;
+		padding: 20px;
+		text-align: center;
+		margin-top: 20px;
+
+	}
